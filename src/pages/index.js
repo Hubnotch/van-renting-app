@@ -5,5 +5,5 @@ export { default as Vans } from './Vans/Vans'
 
 export { default as Dashboard } from './Host/Dashboard'
 export { default as Income } from './Host/Income'
-export { default as Review } from './Host/Review'
+export { default as Reviews } from './Host/Reviews'
 

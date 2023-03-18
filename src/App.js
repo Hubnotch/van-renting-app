@@ -1,7 +1,7 @@
 import React from 'react';
-import { Routes, Route,  } from "react-router-dom"
-import { About, Home, VanDetail, Vans, } from './pages'
-import {Layout }from './components'
+import { Routes, Route, } from "react-router-dom"
+import { About, Home, VanDetail, Vans, Dashboard, Income, Reviews } from './pages'
+import { Layout } from './components'
 
 import "./server"
 
@@ -13,7 +13,10 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />} />
         <Route path="/vans/:id" element={<VanDetail />} />
+        <Route path='/host' element={<Dashboard />} />
+        <Route path='/host/income' element={<Income />} />
+        <Route path='/host/reviews' element={<Reviews />} />
       </Route>
-      </Routes>
+    </Routes>
   )
 }
