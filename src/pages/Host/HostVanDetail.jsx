@@ -9,7 +9,8 @@ const HostVanDetail = () => {
     fetch(`/api/host/vans/${id}`)
       .then(res => res.json())
       .then(data => setCurrentVan(data.vans))
-  }, [id])
+    // eslint-disable-next-line
+  }, [])
 
   if (!currentVan) {
     return <h1>Loading...</h1>
@@ -49,7 +50,7 @@ const HostVanDetail = () => {
         <NavLink style={({ isActive }) => isActive ? activeStyles : null} to="photo">Photo</NavLink>
       </nav>
       <main>
-        <Outlet/>
+        <Outlet context={{currentVan}}/>
 </main>
     </section>
   )
