@@ -1,7 +1,26 @@
 import React from 'react';
-import { Routes, Route, } from "react-router-dom"
-import { About, Home, VanDetail, Vans, Dashboard, Income, Reviews, HostVans, HostVanDetail, HostVanPhoto, HostVanInfo, HostVanPricing } from './pages'
-import { Layout, HostLayout } from './components'
+import {
+  Routes,
+   Route,
+ } from "react-router-dom"
+import {
+  About,
+   Home,
+   VanDetail,
+   Vans,
+   Dashboard,
+   Income,
+   Reviews,
+   HostVans,
+   HostVanDetail,
+   HostVanPhoto,
+   HostVanInfo,
+  HostVanPricing
+} from './pages'
+import {
+  Layout,
+  HostLayout
+} from './components'
 
 import "./server"
 
@@ -13,7 +32,6 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="vans" element={<Vans />} />
         <Route path="vans/:id" element={<VanDetail />} />
-
         <Route path="host" element={<HostLayout />} >
           <Route index element={<Dashboard />} />
           <Route path='income' element={<Income />} />
