@@ -15,7 +15,8 @@ import {
    HostVanDetail,
    HostVanPhoto,
    HostVanInfo,
-  HostVanPricing
+  HostVanPricing,
+  ErrorPage
 } from './pages'
 import {
   Layout,
@@ -44,6 +45,7 @@ export default function App() {
           </Route>
         </Route>
       </Route>
+      <Route path="*" element={<ErrorPage/>} />
     </Routes>
   )
 }
